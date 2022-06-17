@@ -1,0 +1,49 @@
+body {
+    background-color: gray;
+  }
+  
+  *{
+    overflow: hidden;
+    margin: 0;
+  }
+
+  #login{
+    display: flex;
+    position: absolute;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    left: calc(50% - 127px);
+    border: 1px solid yellow;
+    border-radius: 20px;
+    background-color: orange;
+    top: 125px;
+    color: yellow;
+  }
+  #login-title{
+    font-size: 36px;
+  }
+  .btn{
+    background-color: orangered;
+    color: yellow;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    font-size: 24px;
+  }
+  .margin{
+    margin-top: 5px;
+  }
+  .info{
+    display: none;
+    position: absolute;
+    width: 500px;
+    text-align: center;
+    left: calc(50% - 261px);
+    border: 1px solid yellow;
+    border-radius: 20px;
+    background-color: orange;
+    top: 30px;
+    color: yellow;
+    font-size: 28px;
+    padding: 20px;
+  }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="libs/tween.umd.js"></script>
+  <script src="three.js"></script>
+  <script src="Game.js"></script>
+  <script src="Net.js"></script>
+  <script src="Ui.js"></script>
+  <script src="Main.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Feud</title>
+</head>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+
+  socket.on('gameStarted', function(cards) {
+    console.log("Game started")
+  });
+</script>
+
+<body>
+  <div id="root"></div>
+  <div id="login">
+    <div id="login-title">Zaloguj się</div>
+    <input id="login-name" class="margin" type="text"/>
+    <button id="login-confirm" class="btn margin" onclick="net.handleLogIn()">Loguj</button>
+    <button id="login-reset" class="btn margin" onclick="net.handleReset()">Reset</button>
+  </div>
+  <div id="error-empty" class="info">
+    Username cannot be empty
+  </div>
+</body>
+
+<script>
+
+  window.addEventListener("mousedown", (e) => {
+    console.log('Click')
+  });
+  window.addEventListener("resize", (e) => {
+   game.resize()
+  })
+
+</script>
+
+</html>
